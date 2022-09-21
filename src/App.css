@@ -11,6 +11,8 @@ fieldset {
   width: 40%;
   padding: 20px;
   border: 1px solid blueviolet;
+  background-color: rgb(227, 242, 255);
+  box-shadow: 0 1px 1px  rgba(9,30,66,0.25), 0 0 20px 0 rgba(138, 169, 62, 0.6);
 }
 
 .form_control{
