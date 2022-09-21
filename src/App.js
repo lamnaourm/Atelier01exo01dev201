@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Pht } from "./components/Pht";
+import TauxVA from "./components/Tva";
 
-function App() {
+function Res() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="form_control">
+      <label htmlFor="res">Resultat : </label>
+      <input type="number" id="res" readOnly/>
     </div>
   );
+}
+
+function Buttons() {
+  return (
+    <div className="form_control">
+      <input type="button" value='Calculer' />
+      <input type="button" value='Initialiser' />
+    </div>
+  );
+}
+
+
+function CalculPTTC(){
+  return <fieldset>
+    <legend>Calcul PTTC</legend>
+    <Pht/>
+    <TauxVA/>
+    <Buttons/>
+    <Res/>
+  </fieldset>
+}
+function App() {
+  return <div className="container">
+      <CalculPTTC />
+  </div>;
 }
 
 export default App;
